@@ -6,4 +6,8 @@ public class GrupoAutomovel {
     public void alterarClasse(String novaClasse){
         this.classe = novaClasse;
     }
+
+    public String toString(){
+        return String.format("Classe = " + this.classe);
+    }
 }
