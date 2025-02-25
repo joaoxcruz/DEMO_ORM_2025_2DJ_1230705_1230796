@@ -7,4 +7,8 @@ public class Automovel {
         return this.matricula;
     }
 
+    public String toString(){
+        return matricula();
+    }
+
 }
