@@ -1,5 +1,9 @@
-package domain;
+package isep.eapli.demo_orm.domain;
 
 public class GrupoAutomovel {
+    private String classe;
 
+    public void alterarClasse(String novaClasse){
+        this.classe = novaClasse;
+    }
 }
