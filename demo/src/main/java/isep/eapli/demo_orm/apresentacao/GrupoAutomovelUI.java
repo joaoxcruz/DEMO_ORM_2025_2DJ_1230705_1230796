@@ -9,6 +9,8 @@ import isep.eapli.demo_orm.aplicacao.GrupoAutomovelController;
 import isep.eapli.demo_orm.dominio.GrupoAutomovel;
 import isep.eapli.demo_orm.util.Console;
 
+import java.util.List;
+
 /**
  *
  * @author mcn
@@ -27,7 +29,10 @@ public class GrupoAutomovelUI {
         System.out.println("Grupo Automóvel" + grupoAutomovel);
     }
     public void listarGAs() {
-		throw new UnsupportedOperationException("Ainda não implementada.");
+		List<GrupoAutomovel> lista = controller.listarGruposAutomoveis();
+        for(GrupoAutomovel grupoAutomovel : lista) {
+            System.out.println(grupoAutomovel);
+        }
 	}
 
 	public void procurarGAPorID(long id) {
