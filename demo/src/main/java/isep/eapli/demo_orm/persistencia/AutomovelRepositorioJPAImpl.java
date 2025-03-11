@@ -5,19 +5,18 @@
  */
 package isep.eapli.demo_orm.persistencia;
 
-import isep.eapli.demo_orm.dominio.GrupoAutomovel;
-import java.util.List;
+import isep.eapli.demo_orm.dominio.Automovel;
 import jakarta.persistence.Query;
 
+import java.util.List;
 
 /**
  *
  * @author eapli
- * Refactored to extend JpaRepository to remove duplicated code
  */
-public class GrupoAutomovelRepositorioJPAImpl extends JpaRepository<GrupoAutomovel, String> implements GrupoAutomovelRepositorio {
+public class AutomovelRepositorioJPAImpl extends JpaRepository<Automovel, String> implements AutomovelRepositorio {
 
-    public GrupoAutomovelRepositorioJPAImpl() {
+    public AutomovelRepositorioJPAImpl() {
         super();
     }
 
@@ -27,10 +26,10 @@ public class GrupoAutomovelRepositorioJPAImpl extends JpaRepository<GrupoAutomov
      * @return
      */
     @Override
-    public List<GrupoAutomovel> findAll() {
+    public List<Automovel> findAll() {
         Query query = entityManager().createQuery(
-                "SELECT e FROM GrupoAutomovel e");
-        List<GrupoAutomovel> list = query.getResultList();
+                "SELECT e FROM Automovel e");
+        List<Automovel> list = query.getResultList();
         return list;
     }
 
@@ -38,5 +37,4 @@ public class GrupoAutomovelRepositorioJPAImpl extends JpaRepository<GrupoAutomov
     protected String persistenceUnitName() {
         return "DEMO_ORMPU";
     }
-
 }

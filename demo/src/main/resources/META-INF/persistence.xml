@@ -5,6 +5,8 @@
              version="3.2">
   <persistence-unit name="DEMO_ORMPU">
     <class>isep.eapli.demo_orm.dominio.GrupoAutomovel</class>
+    <class>isep.eapli.demo_orm.dominio.Automovel</class>
+
     <properties>
       <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
       <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:./db/rentacar"/>
