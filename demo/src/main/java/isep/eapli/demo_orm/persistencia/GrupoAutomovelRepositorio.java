@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package isep.eapli.demo_orm.repository;
+package isep.eapli.demo_orm.persistencia;
 
-import isep.eapli.demo_orm.domain.GrupoAutomovel;
+import isep.eapli.demo_orm.dominio.GrupoAutomovel;
 import java.util.List;
 
 /**

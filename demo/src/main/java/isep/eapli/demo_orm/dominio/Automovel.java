@@ -1,4 +1,4 @@
-package isep.eapli.demo_orm.domain;
+package isep.eapli.demo_orm.dominio;
 
 public class Automovel {
     public String matricula;

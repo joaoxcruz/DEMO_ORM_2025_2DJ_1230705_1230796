@@ -1,4 +1,4 @@
-package isep.eapli.demo_orm.domain;
+package isep.eapli.demo_orm.dominio;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -8,7 +8,18 @@ public class GrupoAutomovel {
     private String classe;
     private int nPortas;
     @Id
-    private Long id;
+    private String id;
+
+    public GrupoAutomovel(String nome, int portas, String classe) {
+        this.id = nome;
+        this.classe = classe;
+        this.nPortas = portas;
+
+    }
+
+    public GrupoAutomovel() {
+
+    }
 
 
     public void alterarNumeroPortas(int nPortas){
@@ -23,11 +34,11 @@ public class GrupoAutomovel {
         return String.format("Classe = " + this.classe);
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 }

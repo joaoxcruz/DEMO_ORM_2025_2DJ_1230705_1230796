@@ -4,6 +4,7 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd"
              version="3.2">
   <persistence-unit name="DEMO_ORMPU">
+    <class>isep.eapli.demo_orm.dominio.GrupoAutomovel</class>
     <properties>
       <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
       <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:./db/rentacar"/>
@@ -11,6 +12,7 @@
       <property name="jakarta.persistence.jdbc.password" value="password"/>
       <property name="jakarta.persistence.schema-generation.database.action"
                 value="create"/>
+
     </properties>
 
   </persistence-unit>
