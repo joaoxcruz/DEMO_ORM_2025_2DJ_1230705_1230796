@@ -56,7 +56,7 @@ public class GrupoAutomovelRepositorioJPAImpl implements GrupoAutomovelRepositor
      * @return
      */
     @Override
-    public GrupoAutomovel findById(Long id) {
+    public GrupoAutomovel findById(String id) {
         return getEntityManager().find(GrupoAutomovel.class, id);
     }
 

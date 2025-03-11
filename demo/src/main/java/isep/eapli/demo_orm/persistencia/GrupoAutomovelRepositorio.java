@@ -28,7 +28,7 @@ public interface GrupoAutomovelRepositorio {
      * @param id
      * @return
      */
-    public GrupoAutomovel findById(Long id);
+    public GrupoAutomovel findById(String id);
 
     /**
      * Returns the List of all entities in the persistence store

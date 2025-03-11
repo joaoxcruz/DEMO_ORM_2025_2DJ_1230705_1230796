@@ -30,7 +30,7 @@ public class GrupoAutomovelUI {
 		throw new UnsupportedOperationException("Ainda não implementada.");
 	}
 
-	public void procurarGAPorID(long id) {
-		throw new UnsupportedOperationException("Ainda não implementada.");
+	public void procurarGAPorID(String id) {
+
 	}
 }
