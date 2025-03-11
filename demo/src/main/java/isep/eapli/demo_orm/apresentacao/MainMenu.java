@@ -5,13 +5,17 @@
  */
 package isep.eapli.demo_orm.apresentacao;
 
+import isep.eapli.demo_orm.aplicacao.GrupoAutomovelController;
 import isep.eapli.demo_orm.util.Console;
+
+import java.util.Scanner;
 
 /**
  *
  * @author mcn
  */
 public class MainMenu {
+	static GrupoAutomovelController grupoAutomovelController = new GrupoAutomovelController();
     public static void mainLoop() {
 		int opcao = 0;
 		do {
@@ -22,7 +26,15 @@ public class MainMenu {
 					System.out.println("fim ...");
 					break;
 				case 1:
-					System.out.println("Ainda não implementado ...");
+					System.out.println("Introduza os seguintes dados do carro:\n");
+					System.out.println("Classe:\n");
+					Scanner input = new Scanner(System.in);
+					String classe = input.nextLine();
+					System.out.println("Número de Portas:\n");
+					int nPortas = Integer.parseInt(input.nextLine());
+					System.out.println("Nome:\n");
+					String nome = input.nextLine();
+					grupoAutomovelController.registarGrupoAutomóvel(nome, nPortas, classe);
 					break;
 
 				case 2:
