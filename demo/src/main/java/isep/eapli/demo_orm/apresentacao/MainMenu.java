@@ -38,7 +38,8 @@ public class MainMenu {
 					break;
 
 				case 2:
-					System.out.println("Ainda não implementado ...");
+					GrupoAutomovelUI grupoAutomovelUI = new GrupoAutomovelUI();
+					grupoAutomovelUI.listarGAs();
 					break;
 
 				
