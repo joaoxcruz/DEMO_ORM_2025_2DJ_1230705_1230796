@@ -36,6 +36,7 @@ public class GrupoAutomovelUI {
 	}
 
 	public void procurarGAPorID(String id) {
-
+        GrupoAutomovel g1 = controller.procurarGrupoAutomovel(id);
+        System.out.println(g1);
 	}
 }

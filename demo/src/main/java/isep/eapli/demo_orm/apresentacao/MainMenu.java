@@ -16,7 +16,9 @@ import java.util.Scanner;
  */
 public class MainMenu {
 	static GrupoAutomovelController grupoAutomovelController = new GrupoAutomovelController();
-    public static void mainLoop() {
+	static GrupoAutomovelUI grupoAutomovelUI = new GrupoAutomovelUI();
+
+	public static void mainLoop() {
 		int opcao = 0;
 		do {
 			opcao = menu();
@@ -26,24 +28,17 @@ public class MainMenu {
 					System.out.println("fim ...");
 					break;
 				case 1:
-					System.out.println("Introduza os seguintes dados do carro:\n");
-					System.out.println("Classe:\n");
-					Scanner input = new Scanner(System.in);
-					String classe = input.nextLine();
-					System.out.println("Número de Portas:\n");
-					int nPortas = Integer.parseInt(input.nextLine());
-					System.out.println("Nome:\n");
-					String nome = input.nextLine();
-					grupoAutomovelController.registarGrupoAutomóvel(nome, nPortas, classe);
-					break;
+					grupoAutomovelUI.registarGA();
 
 				case 2:
-					GrupoAutomovelUI grupoAutomovelUI = new GrupoAutomovelUI();
 					grupoAutomovelUI.listarGAs();
 					break;
+				case 3:
+					System.out.println("*** Procurar por ID ***\n");
+					String id = Console.readLine("ID:");
+					grupoAutomovelUI.procurarGAPorID(id);
+					break;
 
-				
-				
 				default:
 					System.out.println("opcao não reconhecida.");
 					break;
@@ -59,9 +54,10 @@ public class MainMenu {
 		System.out.println(" Rent a Car ");
 		System.out.println("=============================\n");
 		System.out.println("1.Registar Grupo Automóvel");
-		System.out.println("2.Listar todos os Grupos Automóveis");          
-		
-        System.out.println("=============================");
+		System.out.println("2.Listar todos os Grupos Automóveis");
+		System.out.println("3. Procurar Grupo Automóvel por ID");
+
+		System.out.println("=============================");
         System.out.println("0. Sair\n\n");
 		option = Console.readInteger("Por favor escolha opção");
 		return option;
